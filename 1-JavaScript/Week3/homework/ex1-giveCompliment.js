@@ -35,7 +35,6 @@ function giveCompliment(name) {
   return `You are ${compliments[i]}, ${name}!`;
 }
 
-// TODO substitute your own name for "HackYourFuture"
 const myName = 'Alex';
 
 console.log(giveCompliment(myName));
