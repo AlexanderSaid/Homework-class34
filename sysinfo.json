@@ -1,0 +1,141 @@
+{
+  "node": "v14.17.6",
+  "system": {
+    "manufacturer": "Micro-Star International Co., Ltd.",
+    "model": "MS-7C91"
+  },
+  "cpu": {
+    "manufacturer": "AMD",
+    "brand": "Ryzen 5 5600X 6-Core Processor",
+    "speed": 3.7
+  },
+  "memory": "16 GB",
+  "osInfo": {
+    "platform": "win32",
+    "distro": "Microsoft Windows 10 Pro",
+    "release": "10.0.19043"
+  },
+  "vscodeInfo": {
+    "version": "1.61.1",
+    "extensions": [
+      "aaron-bond.better-comments",
+      "albert.TabOut",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "bierner.markdown-emoji",
+      "bierner.markdown-preview-github-styles",
+      "bierner.markdown-yaml-preamble",
+      "christian-kohler.npm-intellisense",
+      "christian-kohler.path-intellisense",
+      "CoenraadS.bracket-pair-colorizer-2",
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "eg2.vscode-npm-script",
+      "esbenp.prettier-vscode",
+      "formulahendry.auto-rename-tag",
+      "gerane.Theme-TomorrowNightBlue",
+      "hnw.vscode-auto-open-markdown-preview",
+      "jasonnutter.search-node-modules",
+      "johnpapa.vscode-peacock",
+      "johnpapa.winteriscoming",
+      "marnix.peacock",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "ms-toolsai.jupyter-keymap",
+      "ms-toolsai.jupyter-renderers",
+      "msjsdiag.debugger-for-chrome",
+      "patbenatar.advanced-new-file",
+      "PKief.material-icon-theme",
+      "pnp.polacode",
+      "ritwickdey.LiveServer",
+      "rssowl.copy-relative-path-posix",
+      "sdras.night-owl",
+      "streetsidesoftware.code-spell-checker",
+      "vscode-icons-team.vscode-icons",
+      "waderyan.nodejs-extension-pack",
+      "WallabyJs.quokka-vscode",
+      "wesbos.theme-cobalt2",
+      "xabikos.JavaScriptSnippets"
+    ],
+    "userSettings": {
+      "workbench.colorTheme": "Cobalt2",
+      "files.autoSave": "afterDelay",
+      "editor.fontSize": 16,
+      "editor.fontFamily": "'Fira Code'",
+      "editor.tabSize": 2,
+      "files.autoSaveDelay": 1500,
+      "editor.minimap.enabled": false,
+      "editor.lineHeight": 25,
+      "editor.smoothScrolling": true,
+      "editor.cursorBlinking": "phase",
+      "editor.fontLigatures": true,
+      "editor.mouseWheelZoom": true,
+      "window.title": "${dirty}${activeEditorShort}${separator}${rootPath}${separator}${appName}",
+      "editor.wordWrap": "bounded",
+      "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.quickSuggestions": false
+      },
+      "security.workspace.trust.untrustedFiles": "open",
+      "editor.formatOnSave": true,
+      "editor.rulers": [
+        80
+      ],
+      "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "workbench.editor.enablePreview": false,
+      "files.insertFinalNewline": true,
+      "terminal.integrated.defaultProfile.windows": "Git Bash",
+      "workbench.iconTheme": "vscode-icons",
+      "workbench.panel.defaultLocation": "right",
+      "terminal.integrated.defaultLocation": "editor",
+      "editor.tokenColorCustomizations": {
+        "[Cobalt2]": {
+          "textMateRules": [
+            {
+              "scope": [
+                "comment.block",
+                "punctuation.definition.comment.end",
+                "punctuation.definition.comment.begin"
+              ],
+              "settings": {
+                "foreground": "#7d89f1",
+                "fontStyle": ""
+              }
+            },
+            {
+              "scope": [
+                "comment.block.documentation",
+                "punctuation.definition.comment.begin.documentation",
+                "punctuation.definition.comment.end.documentation"
+              ],
+              "settings": {
+                "foreground": "#60a8b9",
+                "fontStyle": ""
+              }
+            },
+            {
+              "scope": [
+                "comment.line",
+                "punctuation.definition.comment"
+              ],
+              "settings": {
+                "foreground": "#b3b47b",
+                "fontStyle": ""
+              }
+            }
+          ]
+        }
+      },
+      "files.eol": "\r\n",
+      "terminal.integrated.fontWeight": 400,
+      "terminal.integrated.fontSize": 15
+    }
+  }
+}
