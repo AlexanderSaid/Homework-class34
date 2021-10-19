@@ -21,21 +21,44 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
+  nuts: 3.55,
+  wine: 2.32,
+  chips: 1.05,
+  beer: 2.7,
+  cheese: 3.45,
+};
+// For some reason the looping solution below advices to avoid (for...in) and use Object.keys() instead.
+function calculateTotalPrice(obj) {
+  let total = 0;
+  for (const key in obj) {
+    total += obj[key];
+  }
+  return `Total: \u20AC ${total}`;
+}
+
+// Another solution
+const calculateTotalPrice2 = (obj) => {
+  const total = Object.values(obj).reduce((prev, curr) => prev + curr);
+  return `Total: \u20AC ${total}`;
 };
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
-}
+// Another solution
+const calculateTotalPrice3 = (obj) => {
+  let total = 0;
+  Object.keys(obj).forEach((key) => (total += obj[key]));
+  return `Total: \u20AC ${total}`;
+};
 
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  console.assert(calculateTotalPrice.length === 1);
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  const expected = 'Total: \u20AC 13.07';
+  const actual = calculateTotalPrice(cartForParty);
+  console.assert(expected === actual);
 }
 
 function test() {
