@@ -1,0 +1,11 @@
+*** Unit Test Error Report ***
+
+- tellFortune should tell the fortune by randomly selecting array values
+
+*** Spell Checker Report ***
+
+ex3-tellFortune.js:35:24 - Unknown word (Rasha)
+ex3-tellFortune.js:35:33 - Unknown word (Nada)
+ex3-tellFortune.js:35:41 - Unknown word (Mayaan)
+ex3-tellFortune.js:35:51 - Unknown word (Roula)
+ex3-tellFortune.js:35:60 - Unknown word (Dima)
