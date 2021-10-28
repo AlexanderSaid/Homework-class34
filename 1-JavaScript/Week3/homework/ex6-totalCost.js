@@ -28,24 +28,24 @@ const cartForParty = {
   cheese: 3.45,
 };
 // For some reason the looping solution below advices to avoid (for...in) and use Object.keys() instead.
-function calculateTotalPrice(obj) {
+function calculateTotalPrice(cart) {
   let total = 0;
-  for (const key in obj) {
-    total += obj[key];
+  for (const item in cart) {
+    total += cart[item];
   }
   return `Total: \u20AC ${total}`;
 }
 
 // Another solution
-const calculateTotalPrice2 = (obj) => {
-  const total = Object.values(obj).reduce((prev, curr) => prev + curr);
+const calculateTotalPrice2 = (cart) => {
+  const total = Object.values(cart).reduce((prev, curr) => prev + curr);
   return `Total: \u20AC ${total}`;
 };
 
 // Another solution
-const calculateTotalPrice3 = (obj) => {
+const calculateTotalPrice3 = (cart) => {
   let total = 0;
-  Object.keys(obj).forEach((key) => (total += obj[key]));
+  Object.keys(cart).forEach((item) => (total += cart[item]));
   return `Total: \u20AC ${total}`;
 };
 

@@ -30,7 +30,7 @@ Note: The DRY principle is put into practice here: instead of repeating the code
 randomly select array elements four times inside the `tellFortune` function 
 body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
-const numKids = ['No', 1, 2, 3, 4];
+const numKids = [0, 1, 2, 3, 4];
 
 const partnerNames = ['Rasha', 'Nada', 'Mayaan', 'Roula', 'Dima'];
 
@@ -41,8 +41,8 @@ const jobTitles = ['Web Developer', 'Barber', 'Librarian', 'Driver', 'Barista'];
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 function selectRandomly(arr) {
-  const i = Math.floor(Math.random() * arr.length);
-  return arr[i];
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
 }
 
 function tellFortune(numKids, partnerNames, locations, jobTitles) {
