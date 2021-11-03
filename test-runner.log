@@ -44,3 +44,11 @@ Ran all test suites matching /ex2-aboutMe.test.js/i.
 2021-11-03 03:11:09 info: ---------------------------------------
 2021-11-03 03:11:13 info: All unit tests passed.
 2021-11-03 03:11:15 info: All steps were completed successfully
+2021-11-03 03:12:25 info: ------------------------------------------
+2021-11-03 03:12:25 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2021-11-03 03:12:25 info: ------------------------------------------
+2021-11-03 03:12:27 info: All unit tests passed.
+2021-11-03 03:12:29 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:11:49 - Unknown word (Xdpd)
+
