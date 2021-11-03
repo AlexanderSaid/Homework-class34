@@ -3,3 +3,44 @@
 2021-11-03 03:05:43 info: ----------------------------------------
 2021-11-03 03:05:47 info: All unit tests passed.
 2021-11-03 03:05:49 info: All steps were completed successfully
+2021-11-03 03:07:48 info: ---------------------------------------
+2021-11-03 03:07:48 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-03 03:07:48 info: ---------------------------------------
+2021-11-03 03:07:53 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    √ should be syntactically valid (54 ms)
+    √ the body font-family should be `Arial, sans-serif`
+    √ each <li> should have the CSS class `list-item` (1 ms)
+    × each <li> should rendered red (21 ms)
+
+  ● Generated HTML › each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      30 |       (node) => window.getComputedStyle(node).color
+      31 |     );
+    > 32 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      33 |   });
+      34 | });
+      35 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:32:54)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        3.636 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+
+2021-11-03 03:11:04 info: Disclaimer turned off
+2021-11-03 03:11:09 info: ---------------------------------------
+2021-11-03 03:11:09 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-11-03 03:11:09 info: ---------------------------------------
+2021-11-03 03:11:13 info: All unit tests passed.
+2021-11-03 03:11:15 info: All steps were completed successfully
