@@ -52,3 +52,8 @@ Ran all test suites matching /ex2-aboutMe.test.js/i.
 
 ex3-hijackLogo.js:11:49 - Unknown word (Xdpd)
 
+2021-11-03 03:14:54 info: --------------------------------------------
+2021-11-03 03:14:54 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2021-11-03 03:14:54 info: --------------------------------------------
+2021-11-03 03:15:02 info: All unit tests passed.
+2021-11-03 03:15:06 info: All steps were completed successfully
