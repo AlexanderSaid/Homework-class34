@@ -39,7 +39,51 @@ const myBooks = [
 ];
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const ul = document.createElement('ul');
+  const imagesSources = [
+    {
+      src: 'assets/the_design_of_everyday_things.jpg',
+      alt: "The design of everyday things' cover",
+    },
+    {
+      src: 'assets/the_most_human_human.jpg',
+      alt: "The most human human's cover",
+    },
+    {
+      src: 'assets/the_pragmatic_programmer.jpg',
+      alt: "The pragmatic programmer's cover",
+    },
+  ];
+  books.forEach((book, index) => {
+    const li = document.createElement('li');
+    const bgColor = book.alreadyRead
+      ? 'rgba(91, 240, 131, 50%)'
+      : 'rgba(219, 134, 142, 50%)';
+    li.style.backgroundColor = bgColor;
+    li.style.maxWidth = '30%';
+    li.style.display = 'flex';
+    li.style.flexDirection = 'column';
+    li.style.justifyContent = 'space-between';
+    li.style.alignItems = 'center';
+    const p = document.createElement('p');
+    p.textContent = `${book.title}.  By: ${book.author}`;
+    p.style.padding = '15px';
+    p.style.textAlign = 'center';
+    p.style.color = '#0a075c';
+    const img = document.createElement('img');
+    img.src = imagesSources[index].src;
+    img.alt = imagesSources[index].alt;
+    img.style.width = '90%';
+
+    li.appendChild(p);
+    li.appendChild(img);
+    ul.appendChild(li);
+  });
+  ul.style.listStyle = 'none';
+  ul.style.display = 'flex';
+  ul.style.justifyContent = 'space-around';
+
+  return ul;
 }
 
 const ulElement = createBookList(myBooks);
