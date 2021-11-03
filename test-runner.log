@@ -57,3 +57,49 @@ ex3-hijackLogo.js:11:49 - Unknown word (Xdpd)
 2021-11-03 03:14:54 info: --------------------------------------------
 2021-11-03 03:15:02 info: All unit tests passed.
 2021-11-03 03:15:06 info: All steps were completed successfully
+2021-11-03 07:04:27 info: ---------------------------------------
+2021-11-03 07:04:27 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-11-03 07:04:27 info: ---------------------------------------
+2021-11-03 07:04:33 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    √ HTML should be syntactically valid (50 ms)
+    √ should have all TODO comments removed
+    √ should use `setInterval()` and/or `setTimeout()`
+    √ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    × `window.onload` or `window.addEventListener` should not call its event handler function (2 ms)
+
+  ● catWalk › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      49 |
+      50 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 51 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      52 |   });
+      53 | });
+      54 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:51:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.898 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+
+2021-11-03 07:08:13 info: ---------------------------------------
+2021-11-03 07:08:13 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-11-03 07:08:13 info: ---------------------------------------
+2021-11-03 07:08:17 info: All unit tests passed.
+2021-11-03 07:08:19 info: All steps were completed successfully
+2021-11-03 07:12:50 info: ---------------------------------------
+2021-11-03 07:12:50 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-11-03 07:12:50 info: ---------------------------------------
+2021-11-03 07:12:54 info: All unit tests passed.
+2021-11-03 07:12:56 info: All steps were completed successfully
