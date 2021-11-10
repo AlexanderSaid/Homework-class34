@@ -8,14 +8,19 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
-  const div = document.createElement('div');
-  div.style.fontSize = '12vw';
-  div.style.margin = '30vh auto';
-  div.style.textAlign = 'center';
+  const timeContainer = document.createElement('div');
+  timeContainer.style.fontSize = '12vw';
+  timeContainer.style.margin = '30vh auto';
+  timeContainer.style.maxWidth = '60%';
+  timeContainer.style.textAlign = 'center';
+  timeContainer.style.padding = '50px 10px';
+  timeContainer.style.backgroundColor = 'rgba(148, 221, 247, 50%)';
+  timeContainer.style.border = '1px solid #080b63';
+  timeContainer.style.borderRadius = '15px 50px';
   const time = document.createElement('time');
   time.style.fontFamily = 'Times new Roman';
   time.style.color = '#080b63';
-  document.body.appendChild(div).appendChild(time);
+  document.body.appendChild(timeContainer).appendChild(time);
   const upToDateTime = () => {
     const currentTime = new Date().toLocaleTimeString();
     time.textContent = currentTime;
