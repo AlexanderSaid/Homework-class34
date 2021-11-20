@@ -119,3 +119,6 @@ dist
 .recent.json
 .disclaimer
 @homework*
+
+# vscode Workspace
+*.code-workspace
