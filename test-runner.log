@@ -1,0 +1,358 @@
+2021-11-20 03:43:47 info: ---------------------------------------
+2021-11-20 03:43:47 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-20 03:43:47 info: ---------------------------------------
+2021-11-20 03:43:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (1 ms)
+    √ should have all TODO comments removed
+    √ should call `new Promise()`
+    √ should take a single argument
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument (2 ms)
+    × should resolve when called with a string argument (1001 ms)
+    × should reject with an Error object when called without an argument (1010 ms)
+
+  ● getAnonName › should resolve when called with a string argument
+
+    You didn't pass in a first name!
+
+      19 |         resolve(fullName);
+      20 |       } else {
+    > 21 |         reject(new Error("You didn't pass in a first name!"));
+         |                ^
+      22 |       }
+      23 |     }, 1000);
+      24 |   });
+
+      at 3-UsingAPIs/Week1/homework/ex1-johnWho.js:21:16
+      at Timeout.task [as _onTimeout] (node_modules/jsdom/lib/jsdom/browser/Window.js:516:19)
+
+  ● getAnonName › should resolve when called with a string argument
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      65 |
+      66 |   test('should resolve when called with a string argument', () => {
+    > 67 |     expect.assertions(3);
+         |            ^
+      68 |     expect(exported).toBeDefined();
+      69 |     const promise = getAnonName('John');
+      70 |     expect(promise).toBeInstanceOf(Promise);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:67:12)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received four assertion calls.
+
+      73 |
+      74 |   test('should reject with an Error object when called without an argument', () => {
+    > 75 |     expect.assertions(3);
+         |            ^
+      76 |     expect(exported).toBeDefined();
+      77 |     const promise = getAnonName();
+      78 |     expect(promise).toBeInstanceOf(Promise);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:75:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 6 passed, 8 total
+Snapshots:   0 total
+Time:        6.752 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+
+2021-11-20 03:43:59 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  3:9  error  'set' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2021-11-20 03:45:38 info: Disclaimer turned off
+2021-11-20 03:45:46 info: ---------------------------------------
+2021-11-20 03:45:46 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-20 03:45:46 info: ---------------------------------------
+2021-11-20 03:45:50 info: All unit tests passed.
+2021-11-20 03:45:51 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  3:9  error  'set' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2021-11-20 03:46:50 info: ---------------------------------------
+2021-11-20 03:46:50 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-20 03:46:50 info: ---------------------------------------
+2021-11-20 03:46:54 info: All unit tests passed.
+2021-11-20 03:46:55 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  3:9  error  'set' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2021-11-20 03:47:55 info: ---------------------------------------
+2021-11-20 03:47:55 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-20 03:47:55 info: ---------------------------------------
+2021-11-20 03:47:59 info: All unit tests passed.
+2021-11-20 03:48:01 info: All steps were completed successfully
+2021-11-20 04:01:43 info: -------------------------------------------------
+2021-11-20 04:01:43 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-11-20 04:01:43 info: -------------------------------------------------
+2021-11-20 04:01:51 info: All unit tests passed.
+2021-11-20 04:01:56 info: All steps were completed successfully
+2021-11-22 02:35:16 info: ----------------------------------------
+2021-11-22 02:35:16 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-11-22 02:35:16 info: ----------------------------------------
+2021-11-22 02:35:25 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDice.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js
+  rollDice
+    √ should exist and be executable (1 ms)
+    × should have all TODO comments removed (7 ms)
+    × should call `new Promise()` (1 ms)
+    × `resolve()` should be called with a one argument (1 ms)
+    × `reject()` should be called with a one argument
+    × should resolve when the dice settles successfully (5 ms)
+    × should reject with an Error when the dice rolls off the table
+
+  ● rollDice › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:39:55)
+
+  ● rollDice › should call `new Promise()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      40 |
+      41 |   test('should call `new Promise()`', () => {
+    > 42 |     expect(state.newPromise).toBeDefined();
+         |                              ^
+      43 |   });
+      44 |
+      45 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:42:30)
+
+  ● rollDice › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      44 |
+      45 |   test('`resolve()` should be called with a one argument', () => {
+    > 46 |     expect(state.resolve).toBe(1);
+         |                           ^
+      47 |   });
+      48 |
+      49 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:46:27)
+
+  ● rollDice › `reject()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      48 |
+      49 |   test('`reject()` should be called with a one argument', () => {
+    > 50 |     expect(state.reject).toBe(1);
+         |                          ^
+      51 |   });
+      52 |
+      53 |   test('should resolve when the dice settles successfully', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:50:26)
+
+  ● rollDice › should resolve when the dice settles successfully
+
+    TypeError: callback is not a function
+
+      32 |     if (roll === randomRollsToDo) {
+      33 |       // TODO replace "success" callback
+    > 34 |       callback(null, value);
+         |       ^
+      35 |     }
+      36 |
+      37 |     // Schedule the next roll todo until no more rolls to do
+
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDice.js:34:7)
+      at cb (3-UsingAPIs/Week1/homework/ex3-rollDice.js:39:24)
+      at 3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:61:35
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDice.js:39:7)
+      at cb (3-UsingAPIs/Week1/homework/ex3-rollDice.js:39:24)
+      at 3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:61:35
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDice.js:39:7)
+      at rollDice (3-UsingAPIs/Week1/homework/ex3-rollDice.js:44:3)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:63:21)
+
+  ● rollDice › should resolve when the dice settles successfully
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received one assertion call.
+
+      52 |
+      53 |   test('should resolve when the dice settles successfully', () => {
+    > 54 |     expect.assertions(3);
+         |            ^
+      55 |     expect(exported).toBeDefined();
+      56 |
+      57 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:54:12)
+
+  ● rollDice › should reject with an Error when the dice rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      75 |
+      76 |   test('should reject with an Error when the dice rolls off the table', async () => {
+    > 77 |     expect.assertions(3);
+         |            ^
+      78 |     expect(exported).toBeDefined();
+      79 |
+      80 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:77:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 1 passed, 7 total
+Snapshots:   0 total
+Time:        4.876 s
+Ran all test suites matching /ex3-rollDice.test.js/i.
+
+2021-11-22 02:35:47 info: ----------------------------------------
+2021-11-22 02:35:47 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-11-22 02:35:47 info: ----------------------------------------
+2021-11-22 02:35:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDice.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js
+  rollDice
+    √ should exist and be executable (1 ms)
+    × should have all TODO comments removed (6 ms)
+    √ should call `new Promise()`
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument (2 ms)
+    √ should resolve when the dice settles successfully (1 ms)
+    √ should reject with an Error when the dice rolls off the table (1 ms)
+
+  ● rollDice › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:39:55)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.255 s, estimated 2 s
+Ran all test suites matching /ex3-rollDice.test.js/i.
+
+2021-11-22 02:36:10 info: ----------------------------------------
+2021-11-22 02:36:10 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-11-22 02:36:10 info: ----------------------------------------
+2021-11-22 02:36:13 info: All unit tests passed.
+2021-11-22 02:36:14 info: All steps were completed successfully
+2021-11-22 02:41:32 info: ----------------------------------------
+2021-11-22 02:41:32 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-11-22 02:41:32 info: ----------------------------------------
+2021-11-22 02:41:34 info: All unit tests passed.
+2021-11-22 02:41:36 info: All steps were completed successfully
+2021-11-22 03:13:11 info: --------------------------------------------
+2021-11-22 03:13:11 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-11-22 03:13:11 info: --------------------------------------------
+2021-11-22 03:13:13 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    × should have all TODO comments removed (4 ms)
+    √ should use `dices.map()` (1 ms)
+    √ should use `Promise.all()`
+    √ should resolve when all dices settle successfully (1 ms)
+    √ should reject with an Error when a dice rolls off the table (2 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:36:55)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.314 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+
+2021-11-22 03:13:31 info: --------------------------------------------
+2021-11-22 03:13:31 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-11-22 03:13:31 info: --------------------------------------------
+2021-11-22 03:13:34 info: All unit tests passed.
+2021-11-22 03:13:35 info: All steps were completed successfully
+2021-11-22 03:14:36 info: --------------------------------------------
+2021-11-22 03:14:36 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-11-22 03:14:36 info: --------------------------------------------
+2021-11-22 03:14:38 info: All unit tests passed.
+2021-11-22 03:14:40 info: All steps were completed successfully
+2021-11-22 03:19:41 info: ----------------------------------------------
+2021-11-22 03:19:41 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2021-11-22 03:19:41 info: ----------------------------------------------
+2021-11-22 03:19:44 info: All unit tests passed.
+2021-11-22 03:19:45 info: All steps were completed successfully

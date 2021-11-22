@@ -40,3 +40,8 @@ rollTheDices()
 
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
+
+/**
+ * ? Unfinished rolling dices keeps rolling after promise rejected
+ * I guess it's because Promise.all() wait all included promises to be resolved
+ */
