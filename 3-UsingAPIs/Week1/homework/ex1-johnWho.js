@@ -9,10 +9,10 @@ Rewrite this function, but replace the callback syntax with the Promise syntax:
   didn't pass in a first name!"
 ------------------------------------------------------------------------------*/
 const getAnonName = (firstName) => {
-  const fullName = `${firstName} Doe`;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (firstName) {
+        const fullName = `${firstName} Doe`;
         resolve(fullName);
       } else {
         reject(new Error("You didn't pass in a first name!"));
