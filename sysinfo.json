@@ -1,0 +1,226 @@
+{
+  "node": "v14.17.6",
+  "system": {
+    "manufacturer": "Micro-Star International Co., Ltd.",
+    "model": "MS-7C91"
+  },
+  "cpu": {
+    "manufacturer": "AMD",
+    "brand": "Ryzen 5 5600X 6-Core Processor",
+    "speed": 3.7
+  },
+  "memory": "16 GB",
+  "osInfo": {
+    "platform": "win32",
+    "distro": "Microsoft Windows 10 Pro",
+    "release": "10.0.19043"
+  },
+  "vscodeInfo": {
+    "version": "1.62.3",
+    "extensions": [
+      "aaron-bond.better-comments",
+      "albert.TabOut",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "bierner.markdown-emoji",
+      "bierner.markdown-yaml-preamble",
+      "christian-kohler.npm-intellisense",
+      "christian-kohler.path-intellisense",
+      "CoenraadS.bracket-pair-colorizer-2",
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "eg2.vscode-npm-script",
+      "esbenp.prettier-vscode",
+      "formulahendry.auto-rename-tag",
+      "gerane.Theme-TomorrowNightBlue",
+      "hnw.vscode-auto-open-markdown-preview",
+      "jasonnutter.search-node-modules",
+      "johnpapa.vscode-peacock",
+      "johnpapa.winteriscoming",
+      "marnix.peacock",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "ms-toolsai.jupyter-keymap",
+      "ms-toolsai.jupyter-renderers",
+      "msjsdiag.debugger-for-chrome",
+      "patbenatar.advanced-new-file",
+      "PKief.material-icon-theme",
+      "pnp.polacode",
+      "ritwickdey.LiveServer",
+      "rssowl.copy-relative-path-posix",
+      "sdras.night-owl",
+      "shd101wyy.markdown-preview-enhanced",
+      "streetsidesoftware.code-spell-checker",
+      "TabNine.tabnine-vscode",
+      "vscode-icons-team.vscode-icons",
+      "waderyan.nodejs-extension-pack",
+      "WallabyJs.quokka-vscode",
+      "wesbos.theme-cobalt2",
+      "xabikos.JavaScriptSnippets"
+    ],
+    "userSettings": {
+      "workbench.colorTheme": "Cobalt2",
+      "files.autoSave": "afterDelay",
+      "editor.fontSize": 16,
+      "editor.fontFamily": "'Fira Code'",
+      "editor.tabSize": 2,
+      "files.autoSaveDelay": 1500,
+      "editor.minimap.enabled": false,
+      "editor.lineHeight": 25,
+      "editor.smoothScrolling": true,
+      "editor.cursorBlinking": "phase",
+      "editor.fontLigatures": true,
+      "editor.mouseWheelZoom": true,
+      "window.title": "${dirty}${activeEditorShort}${separator}${rootPath}${separator}${appName}",
+      "editor.wordWrap": "bounded",
+      "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.quickSuggestions": false
+      },
+      "security.workspace.trust.untrustedFiles": "open",
+      "editor.formatOnSave": true,
+      "editor.rulers": [
+        80
+      ],
+      "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "workbench.editor.enablePreview": false,
+      "files.insertFinalNewline": true,
+      "terminal.integrated.defaultProfile.windows": "Git Bash",
+      "workbench.iconTheme": "vscode-icons",
+      "workbench.panel.defaultLocation": "left",
+      "terminal.integrated.defaultLocation": "editor",
+      "editor.tokenColorCustomizations": {
+        "comments": {
+          "foreground": "#f0ebbc",
+          "fontStyle": ""
+        },
+        "[Cobalt2]": {
+          "textMateRules": [
+            {
+              "scope": [
+                "comment.line"
+              ],
+              "settings": {
+                "foreground": "#97bfe4",
+                "fontStyle": ""
+              }
+            },
+            {
+              "scope": [
+                "comment.block",
+                "punctuation.definition.comment.end",
+                "punctuation.definition.comment.begin"
+              ],
+              "settings": {
+                "foreground": "#f0ebbc",
+                "fontStyle": ""
+              }
+            },
+            {
+              "scope": [
+                "comment.block.documentation",
+                "punctuation.definition.comment.begin.documentation",
+                "punctuation.definition.comment.end.documentation"
+              ],
+              "settings": {
+                "foreground": "#f0ebbc",
+                "fontStyle": ""
+              }
+            }
+          ]
+        }
+      },
+      "files.eol": "\r\n",
+      "terminal.integrated.fontWeight": 400,
+      "terminal.integrated.fontSize": 15,
+      "terminal.integrated.cursorStyle": "line",
+      "terminal.integrated.cursorBlinking": true,
+      "tabnine.experimentalAutoImports": true,
+      "better-comments.tags": [
+        {
+          "tag": "!",
+          "color": "#FF2D00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "?",
+          "color": "#3498DB",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "//",
+          "color": "#6feafc",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "todo",
+          "color": "#FF8C00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "*",
+          "color": "#dff075",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "-",
+          "color": "#ffa1fc",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "--",
+          "color": "#ffa1fc",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "note",
+          "color": "#59c951",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "markdown.preview.fontSize": 16,
+      "markdown.preview.fontFamily": "'Trebuchet MS', 'Fira code', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+      "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+      "workbench.startupEditor": "none"
+    }
+  }
+}
