@@ -233,3 +233,13 @@ ex3-rollAnAce.js
 2021-11-29 12:31:27 info: -----------------------------------------
 2021-11-29 12:31:29 info: All unit tests passed.
 2021-11-29 12:31:31 info: All steps were completed successfully
+2021-11-29 12:45:27 info: ----------------------------------------
+2021-11-29 12:45:27 info: >>> Running Unit Test `ex4-diceRace` <<<
+2021-11-29 12:45:27 info: ----------------------------------------
+2021-11-29 12:45:29 info: All unit tests passed.
+2021-11-29 12:45:31 info: All steps were completed successfully
+2021-11-29 12:56:51 info: ----------------------------------------
+2021-11-29 12:56:51 info: >>> Running Unit Test `ex4-diceRace` <<<
+2021-11-29 12:56:51 info: ----------------------------------------
+2021-11-29 12:56:53 info: All unit tests passed.
+2021-11-29 12:56:55 info: All steps were completed successfully

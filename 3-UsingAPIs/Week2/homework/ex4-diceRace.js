@@ -15,17 +15,30 @@ const rollDice = require('../../helpers/pokerDiceRoller');
 
 function rollTheDices() {
   const dices = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDice()
+  const promises = dices.map((dice) => rollDice(dice));
+  return Promise.race(promises);
 }
 
 // Refactor this function to use async/await and try/catch
-function main() {
-  rollTheDices()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollTheDices();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
 main();
 
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
+
+/**
+ * Here we are again :)
+ * When Promise.race() executed the promises in it will start asynchronously
+ * invoke, and they won't stop until fulfillment or rejection
+ * and the result will be sent to the callback queue
+ * It will be posted when the stack is empty although the Promise.race()
+ * is fulfilled.
+ */
