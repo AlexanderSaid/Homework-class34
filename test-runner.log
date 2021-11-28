@@ -8,3 +8,228 @@
 2021-11-28 01:55:51 info: ---------------------------------------------
 2021-11-28 01:55:56 info: All unit tests passed.
 2021-11-28 01:55:58 info: All steps were completed successfully
+2021-11-28 11:38:25 info: -----------------------------------------
+2021-11-28 11:38:25 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-11-28 11:38:25 info: -----------------------------------------
+2021-11-28 11:38:29 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    × should have all TODO comments removed (8 ms)
+    × should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    √ should resolve as soon as a dice settles on an ACE (1 ms)
+    √ should reject with an Error when a dice rolls off the table (1 ms)
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:49:55)
+
+  ● ex3-rollAnAce › should not include a recursive call
+
+    expect(received).toBeUndefined()
+
+    Received: true
+
+      50 |
+      51 |   test('should not include a recursive call', () => {
+    > 52 |     expect(state.recursive).toBeUndefined();
+         |                             ^
+      53 |   });
+      54 |
+      55 |   test('should use async/wait', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:52:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        1.817 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-11-28 11:41:50 info: -----------------------------------------
+2021-11-28 11:41:50 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-11-28 11:41:50 info: -----------------------------------------
+2021-11-28 11:41:52 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ should not include a recursive call
+    √ should use async/wait (4 ms)
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a dice settles on an ACE (4 ms)
+    √ should reject with an Error when a dice rolls off the table (1 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ACE"
+    Received: "NINE"
+
+      92 |       expect(promise).toBeInstanceOf(Promise);
+      93 |       const result = await promise;
+    > 94 |       expect(result).toBe('ACE');
+         |                      ^
+      95 |     } finally {
+      96 |       setTimeoutSpy.mockRestore();
+      97 |       randomSpy.mockRestore();
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:94:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.235 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-11-29 12:02:30 info: -----------------------------------------
+2021-11-29 12:02:30 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-11-29 12:02:30 info: -----------------------------------------
+2021-11-29 12:02:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    × should not include a recursive call (5 ms)
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    √ should resolve as soon as a dice settles on an ACE (1 ms)
+    √ should reject with an Error when a dice rolls off the table (2 ms)
+
+  ● ex3-rollAnAce › should not include a recursive call
+
+    expect(received).toBeUndefined()
+
+    Received: true
+
+      50 |
+      51 |   test('should not include a recursive call', () => {
+    > 52 |     expect(state.recursive).toBeUndefined();
+         |                             ^
+      53 |   });
+      54 |
+      55 |   test('should use async/wait', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:52:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.22 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-11-29 12:10:50 info: -----------------------------------------
+2021-11-29 12:10:50 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-11-29 12:10:50 info: -----------------------------------------
+2021-11-29 12:10:52 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ should not include a recursive call (4 ms)
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a dice settles on an ACE (13 ms)
+    √ should reject with an Error when a dice rolls off the table (1 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    Dice 1 rolled off the table.
+
+      75 |           offTable = true;
+      76 |         }
+    > 77 |         reject(new Error(`Dice ${dice} rolled off the table.\n`));
+         |                ^
+      78 |       }
+      79 |
+      80 |       // If the dices settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:77:16)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:90:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:90:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:90:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:90:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:90:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:90:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:90:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:90:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:90:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:90:9)
+      at cb (3-UsingAPIs/helpers/pokerDiceRoller.js:90:26)
+      at 3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:88:35
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:90:9)
+      at 3-UsingAPIs/helpers/pokerDiceRoller.js:95:5
+      at rollDice (3-UsingAPIs/helpers/pokerDiceRoller.js:43:10)
+      at rollDiceUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:18:11)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:93:22)
+
+  ● ex3-rollAnAce › should resolve as soon as a dice settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should resolve as soon as a dice settles on an ACE', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |
+      67 |     expect(exported).toBeDefined();
+      68 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.246 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+
+2021-11-29 12:20:56 info: -----------------------------------------
+2021-11-29 12:20:56 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-11-29 12:20:56 info: -----------------------------------------
+2021-11-29 12:20:59 info: All unit tests passed.
+2021-11-29 12:21:00 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  16:10  error    Unexpected constant condition  no-constant-condition
+  23:3   warning  Remove commented-out code      hyf/no-commented-out-code
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2021-11-29 12:26:56 info: -----------------------------------------
+2021-11-29 12:26:56 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-11-29 12:26:56 info: -----------------------------------------
+2021-11-29 12:26:59 info: All unit tests passed.
+2021-11-29 12:27:01 info: All steps were completed successfully
+2021-11-29 12:31:27 info: -----------------------------------------
+2021-11-29 12:31:27 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-11-29 12:31:27 info: -----------------------------------------
+2021-11-29 12:31:29 info: All unit tests passed.
+2021-11-29 12:31:31 info: All steps were completed successfully

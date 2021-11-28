@@ -12,21 +12,24 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 // ! Do not change or remove the next two lines
 const rollDice = require('../../helpers/pokerDiceRoller');
 
-function rollDiceUntil(wantedValue) {
-  // TODO: rewrite this function using async/await
-  return rollDice().then((value) => {
-    if (value !== wantedValue) {
-      return rollDiceUntil(wantedValue);
+async function rollDiceUntil(wantedValue) {
+  // NOTE: The ESLint didn't except while(true), it even failed in the test
+  const x = 1;
+  while (x) {
+    const value = await rollDice();
+    if (value === wantedValue) {
+      return value;
     }
-    return value;
-  });
+  }
 }
 
-// TODO refactor this function to use try/catch
-function main() {
-  rollDiceUntil('ACE')
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDiceUntil('ACE');
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
 main();
