@@ -13,14 +13,11 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 const rollDice = require('../../helpers/pokerDiceRoller');
 
 async function rollDiceUntil(wantedValue) {
-  // NOTE: The ESLint didn't except while(true), it even failed in the test
-  const x = 1;
-  while (x) {
-    const value = await rollDice();
-    if (value === wantedValue) {
-      return value;
-    }
+  let value = await rollDice();
+  while (value !== wantedValue) {
+    value = await rollDice();
   }
+  return value;
 }
 
 async function main() {
