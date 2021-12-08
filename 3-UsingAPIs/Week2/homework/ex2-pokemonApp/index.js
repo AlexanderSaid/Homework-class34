@@ -36,6 +36,16 @@ function createSelectElement() {
   const selectList = document.createElement('select');
   selectList.name = 'Pokemons';
   selectList.id = 'select';
+  selectList.addEventListener('change', (e) => {
+    if (e.target.value) {
+      const pokemonUrl = e.target.value;
+      fetchImage(pokemonUrl);
+    } else {
+      const pokemonImage = document.querySelector('img');
+      pokemonImage.src = '';
+      pokemonImage.alt = '';
+    }
+  });
   return selectList;
 }
 
@@ -47,8 +57,9 @@ function createUserInterface() {
   const button = createButton();
   const selectList = createSelectElement();
   const firstSelectOption = document.createElement('option');
+  firstSelectOption.id = 'first-option';
   firstSelectOption.value = '';
-  firstSelectOption.textContent = '--select a pokemon';
+  firstSelectOption.textContent = '-- no pokemons yet';
   selectList.appendChild(firstSelectOption);
   const imgContainer = document.createElement('div');
   const img = document.createElement('img');
@@ -64,9 +75,10 @@ function createUserInterface() {
   document.body.appendChild(container);
 }
 
-async function errorHandler(error) {
+function errorHandler(error) {
   console.log('error: ', error.message);
   const errorElement = document.querySelector('h1');
+  //NOTE: This will change the display value for line 57
   errorElement.style.display = 'block';
   errorElement.textContent = `Something went wrong try again!`;
 }
@@ -74,7 +86,6 @@ async function errorHandler(error) {
 async function fetchData(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    console.log(response);
     throw new Error('Request failed!', response.status, response.statusText);
   }
   return response.json();
@@ -87,40 +98,34 @@ async function fetchImage(url) {
     pokemonImage.src = pokemonProfile.sprites.other.dream_world.front_default;
     pokemonImage.alt = pokemonProfile.name;
   } catch (error) {
-    await errorHandler(error);
+    errorHandler(error);
   }
 }
 
-async function fetchAndPopulatePokemons(url) {
+async function fetchAndPopulatePokemons() {
   try {
     const selectList = document.querySelector('#select');
+    const firstOption = document.querySelector('#first-option');
     const button = document.querySelector('button');
-    const pokemonsObject = await fetchData(url);
+    const pokemonsObject = await fetchData(URL);
     const pokemons = pokemonsObject.results;
-    const renderSelectList = () => {
-      pokemons.forEach((pokemon) => {
-        const option = document.createElement('option');
-        option.value = pokemon.url;
-        option.textContent = pokemon.name;
-        selectList.appendChild(option);
-      });
-      button.setAttribute('disabled', 'disabled');
-    };
-    selectList.addEventListener('change', (e) => {
-      if (e.target.value) {
-        const pokemonProfile = `${e.target.value}`;
-        fetchImage(pokemonProfile);
-      }
+    pokemons.forEach((pokemon) => {
+      const option = document.createElement('option');
+      option.value = pokemon.url;
+      option.textContent = pokemon.name;
+      selectList.appendChild(option);
     });
-    button.addEventListener('click', renderSelectList);
+    firstOption.textContent = '-- select a pokemon';
+    button.setAttribute('disabled', 'disabled');
   } catch (error) {
-    await errorHandler(error);
+    errorHandler(error);
   }
 }
 
-async function main() {
+function main() {
   createUserInterface();
-  await fetchAndPopulatePokemons(URL);
+  const button = document.querySelector('button');
+  button.addEventListener('click', fetchAndPopulatePokemons);
 }
 
 window.addEventListener('load', main);

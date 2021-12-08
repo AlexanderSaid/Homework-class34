@@ -3,10 +3,10 @@
 Command failed: npx jest ex2-pokemonApp.test.js --colors
  FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
   pokemonApp
-    × HTML should be syntactically valid (57 ms)
+    × HTML should be syntactically valid (59 ms)
     √ should have all TODO comments removed
-    √ should use `fetch()` (1 ms)
-    √ should use `await fetch()`
+    √ should use `fetch()`
+    √ should use `await fetch()` (1 ms)
     √ should use try/catch
 
   ● pokemonApp › HTML should be syntactically valid
@@ -16,9 +16,9 @@ Command failed: npx jest ex2-pokemonApp.test.js --colors
     Expected: ""
     Received: "
     inline
-      12:230  error  <img> is missing required \"src\" attribute     element-required-attributes
-      12:230  error  <img> is missing required \"alt\" attribute     wcag/h37
-      12:235  error  <h1> cannot be empty, must have text content  empty-heading·
+      12:248  error  <img> is missing required \"src\" attribute     element-required-attributes
+      12:248  error  <img> is missing required \"alt\" attribute     wcag/h37
+      12:253  error  <h1> cannot be empty, must have text content  empty-heading·
     ✖ 3 problems (3 errors, 0 warnings)·
     More information:
       https://html-validate.org/rules/element-required-attributes.html
@@ -40,5 +40,5 @@ Command failed: npx jest ex2-pokemonApp.test.js --colors
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
-Time:        3.474 s
+Time:        6.981 s
 Ran all test suites matching /ex2-pokemonApp.test.js/i.
